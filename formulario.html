@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - InnoTech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>InnoTech</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="energia-solar.html">Energia Solar</a></li>
+                <li><a href="energia-eolica.html">Energia Eólica</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="form-section" style="padding: 3rem 2rem; max-width: 600px; margin: 3rem auto;">
+            <h2>Formulário de Serviço</h2>
+            <p>Preencha o formulário abaixo para solicitar um serviço.</p>
+            <form id="serviceForm" action="#" method="post" style="display: flex; flex-direction: column; gap: 1rem; font-family: 'Poppins', sans-serif; position: relative; z-index: 10; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <label for="nome" style="font-weight: 600; color: #333;">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+
+                <label for="email" style="font-weight: 600; color: #333;">Email:</label>
+                <input type="email" id="email" name="email" required style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+
+                <label for="telefone" style="font-weight: 600; color: #333;">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+
+                <label for="servico" style="font-weight: 600; color: #333;">Serviço de Interesse:</label>
+                <select id="servico" name="servico" required style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="consultoria">Consultoria</option>
+                    <option value="instalacao">Instalação</option>
+                    <option value="manutencao">Manutenção</option>
+                </select>
+
+                <label for="detalhes" style="font-weight: 600; color: #333;">Detalhes Adicionais:</label>
+                <textarea id="detalhes" name="detalhes" rows="4" placeholder="Descreva suas necessidades ou dúvidas" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;"></textarea>
+
+                <button type="submit" style="margin-top: 1rem; background-color: #007bff; color: white; font-weight: 600; padding: 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem;">Enviar</button>
+            </form>
+<p id="successMessage" style="display:none; color: green; font-weight: 600; margin-top: 1rem; text-align: center;">Formulário enviado com sucesso</p>
+            <script>
+                document.getElementById('serviceForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.style.display = 'block';
+                });
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@innotech.com.br</p>
+                <p>Telefone: (15) 9.8843-1997</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 InnoTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
